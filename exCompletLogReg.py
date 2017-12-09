@@ -13,14 +13,12 @@ from math import exp
 
 # Load a CSV file
 def load_csv(filename):
-	dataset = list()
-	with open(filename, 'r') as file:
-		csv_reader = reader(file)
-		for row in csv_reader:
-			if not row:
-				continue
-			dataset.append(row)
-	return dataset
+    with open(filename) as file:
+        dataset = [];
+        for line in file:
+            # The rstrip method gets rid of the "\n" at the end of each line
+            dataset.append(line.rstrip().split(" "));
+    return dataset
 
 # Convert string column to float
 def str_column_to_float(dataset, column):
@@ -115,7 +113,7 @@ def logistic_regression(train, test, l_rate, n_epoch):
 # Test the logistic regression algorithm on the diabetes dataset
 seed(1)
 # load and prepare data
-filename = 'pima-indians-diabetes.csv'
+filename = 'C:/Users/Max/Documents/UPM/Massive_Parallele_Machine_Learning/Project/spam.txt'
 dataset = load_csv(filename)
 for i in range(len(dataset[0])):
 	str_column_to_float(dataset, i)
