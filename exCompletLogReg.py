@@ -167,4 +167,4 @@ scores = evaluate_algorithm(dataset, logistic_regression, n_folds, l_rate, n_ite
 print('Scores: %s' % scores);
 print('Mean Accuracy: %.3f%%' % (sum(scores)/float(len(scores))));
 
-cost = cost_function(dataset , 50, 58, 5);
+cost = cost_function(dataset, 100, 58, 5)
