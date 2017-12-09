@@ -66,4 +66,4 @@ def logistic_regression(train, test, l_rate, n_epoch):
 		predictions.append(yhat);
 	return(predictions);
     
-reg = logistic_regression(train, test, 0.6, 10000);
+reg = logistic_regression(train, test, 0.4, 10000);
